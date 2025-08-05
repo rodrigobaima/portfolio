@@ -1,0 +1,31 @@
+/* Gradiente de fundo padrão para navbar e seções */
+.gradient-bg {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+/* Cartão de projeto com animação */
+.project-card {
+    transition: all 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Efeito hover no menu de navegação */
+.nav-link {
+    position: relative;
+}
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+.nav-link:hover:after {
+    width: 100%;
+}
