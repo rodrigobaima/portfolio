@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./favicon.svg" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #6e8efb, #a777e3);
@@ -61,7 +65,7 @@
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden py-4">
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4">
                <a href="#about" class="block py-2 px-4 hover:bg-white hover:bg-opacity-20 rounded">Sobre Mim</a>
                <a href="#portfolio" class="block py-2 px-4 hover:bg-white hover:bg-opacity-20 rounded">Portfólio</a>
                <a href="CV-Rodrigo-Baima.pdf" download class="block py-2 px-4 hover:bg-white hover:bg-opacity-20 rounded">Currículo</a>
@@ -323,26 +327,21 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function () {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
             });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
