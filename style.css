@@ -29,3 +29,8 @@
 .nav-link:hover:after {
     width: 100%;
 }
+
+/* Efeito de transição suave para o menu móvel */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
